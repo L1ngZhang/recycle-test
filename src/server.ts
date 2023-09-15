@@ -38,7 +38,7 @@ app.post('/userlabel', async (req, res) => {
       address: req.body.address,
       city: req.body.city,
       province: req.body.province,
-      postalCode: req.body.postalCode.replaceAll(' ', ''),
+      postalCode: req.body.postalCode.replace(/ /g, ''),
       phone: req.body.phone,
       numberOfItemPerBag: req.body.numberOfItemPerBag,
       boxWeight: req.body.boxWeight,
